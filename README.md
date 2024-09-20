@@ -23,7 +23,7 @@ Make sure you have Python installed on your machine, and you’ll need the follo
 
 To install PyQt5, you can use:
 
-```bash
+
 pip install PyQt5
 
 ## More Info
