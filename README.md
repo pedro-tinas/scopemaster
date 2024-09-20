@@ -25,6 +25,9 @@ To install PyQt5, you can use:
 
 ```bash
 pip install PyQt5
+
+## More Info
+
 How to Use
 Clone the repository and navigate to the project directory:
 
