@@ -169,15 +169,6 @@ Add here all the relevant troubleshooting done by you or the customer. This will
         toolbar = QToolBar("Format Toolbar")
         self.addToolBar(toolbar)
 
-        # Font type dropdown
-        self.font_type_combobox = QComboBox(self)
-        self.font_type_combobox.addItems(["Arial", "Courier", "Times New Roman", "Helvetica", "Verdana"])  # Add more fonts as needed
-        toolbar.addWidget(self.font_type_combobox)
-
-        # Font size dropdown
-        self.font_size_combobox = QComboBox(self)
-        self.font_size_combobox.addItems(["8", "10", "12", "14", "16", "18", "20", "22", "24"])  # Add more sizes as needed
-        toolbar.addWidget(self.font_size_combobox)
 
         # Bold action
         bold_action = QAction(QIcon('bold.png'), 'Bold', self)
@@ -190,11 +181,6 @@ Add here all the relevant troubleshooting done by you or the customer. This will
         italic_action.setCheckable(True)
         italic_action.triggered.connect(self.toggle_italic)
         toolbar.addAction(italic_action)
-
-        # Color action
-        color_action = QAction(QIcon('color.png'), 'Color', self)
-        color_action.triggered.connect(self.choose_color)
-        toolbar.addAction(color_action)
 
 
         # Add bullet list action
@@ -226,12 +212,7 @@ Add here all the relevant troubleshooting done by you or the customer. This will
         fmt.setFontItalic(not fmt.fontItalic())
         self.current_editor().setCurrentCharFormat(fmt)
 
-    def choose_color(self):
-        color = QColorDialog.getColor()
-        if color.isValid():
-            fmt = self.current_editor().currentCharFormat()
-            fmt.setForeground(color)
-            self.current_editor().setCurrentCharFormat(fmt)
+
 
 
     
